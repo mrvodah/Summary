@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ViewHolderActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_loading"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:itemCount="6"
+        app:spanCount="2"
+        tools:listitem="@layout/item_lesson"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/shimmer_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_grid_child_count="2"
+        app:shimmer_demo_layout="@layout/item_lesson"
+        app:shimmer_demo_layout_manager_type="grid"
+        app:shimmer_demo_angle="20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
